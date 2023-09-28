@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfervwejt0pnh"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_5rqs0"]
+[ext_resource type="PackedScene" uid="uid://cjtto7nbptmpy" path="res://world.tscn" id="1_48c00"]
+[ext_resource type="PackedScene" uid="uid://dlkwnkcoclo0u" path="res://ui.tscn" id="2_7ntfp"]
+
+[node name="Main" type="Node2D"]
+light_mask = 0
+script = ExtResource("1_5rqs0")
+
+[node name="World" parent="." instance=ExtResource("1_48c00")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("2_7ntfp")]

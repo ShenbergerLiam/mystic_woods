@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://c14yibdefm4qu"]
+
+[ext_resource type="Script" path="res://ScoreCounter.gd" id="1_bbsif"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mbjfn"]
+load_path = "res://.godot/imported/Number_font (8 x 8).png-bfd3d31185bc37017631e4d38c131c6f.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmx3v"]
+atlas = SubResource("CompressedTexture2D_mbjfn")
+region = Rect2(32, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_adye4"]
+atlas = SubResource("CompressedTexture2D_mbjfn")
+region = Rect2(32, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cdsuf"]
+atlas = SubResource("CompressedTexture2D_mbjfn")
+region = Rect2(32, 8, 8, 8)
+
+[node name="ScoreCounter" type="HBoxContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme_override_constants/separation = 0
+alignment = 2
+script = ExtResource("1_bbsif")
+
+[node name="Digit1" type="TextureRect" parent="."]
+layout_mode = 2
+texture = SubResource("AtlasTexture_fmx3v")
+stretch_mode = 5
+
+[node name="Digit2" type="TextureRect" parent="."]
+layout_mode = 2
+texture = SubResource("AtlasTexture_adye4")
+stretch_mode = 5
+
+[node name="Digit3" type="TextureRect" parent="."]
+layout_mode = 2
+texture = SubResource("AtlasTexture_cdsuf")
+stretch_mode = 5
